@@ -10,6 +10,8 @@ import SocialLoginButton from '../../components/auth/SocialLoginButton'
 import Icon from "react-native-vector-icons/Ionicons";
 import GoogleIcon from "../../assets/images/google.png"
 import TouchableText from '../../components/auth/TouchableText'
+import BottomText from '../../components/auth/BottomText'
+import { signInWithGoogle } from '../../redux/SocialLogin'
 
 const LoginScreen = () => {
   const theme = useColorScheme();
@@ -34,7 +36,7 @@ const LoginScreen = () => {
         <SocialLoginButton
           icon={<Image source={GoogleIcon} style={{ height: 20, width: 20 }} />}
           text='Continue with Google'
-          onPress={() => { }}
+          onPress={() => signInWithGoogle()}
         />
 
         <SocialLoginButton
@@ -43,10 +45,14 @@ const LoginScreen = () => {
           onPress={() => { }}
         />
 
-        <TouchableText 
+        <TouchableText
           firstText='Use other email ID'
-          onPress={() => {}}
+          onPress={() => { }}
           style={{ marginVertical: 30, marginTop: 20 }}
+        />
+
+        <BottomText 
+          
         />
 
       </View>
